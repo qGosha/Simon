@@ -1,0 +1,287 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.panel {
+  position: relative;
+  margin: 60px auto;
+  width: 400px;
+  user-select: none;
+}
+
+.panel div.colors {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  filter: brightness(80%);
+  border: 12px solid #2c2323;
+}
+
+.panel div.colors:first-of-type {
+  border-top-right-radius: 100%;
+  background-color: red;
+  top: 0;
+  left: 50%;
+  border-top: 18px solid #2c2323;
+  border-right: 18px solid #2c2323;
+}
+
+.panel div.colors:nth-of-type(2) {
+  border-bottom-right-radius: 100%;
+  background-color: blue;
+  top: 200px;
+  left: 50%;
+  border-bottom: 18px solid #2c2323;
+  border-right: 18px solid #2c2323;
+}
+
+.panel div.colors:nth-of-type(3) {
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+  top: 200px;
+  border-bottom: 18px solid #2c2323;
+  border-left: 18px solid #2c2323;
+}
+
+.panel div.colors:last-of-type {
+  background-color: green;
+  border-top-left-radius: 100%;
+  top: 0;
+  border-top: 18px solid #2c2323;
+  border-left: 18px solid #2c2323;
+}
+
+.bright {
+  filter: brightness(200%) !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.checkboxGame {
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.checkboxGame .on, .checkboxGame .off {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.start, .strict, .count {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.start span, .strict span, .count span:not(.display) {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.strict {
+  position: relative;
+}
+
+.strict span.strictShow {
+  position: absolute;
+  top: -9px;
+  left: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 1.5px solid #222;
+  background-color: #222;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.start button, .strict button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 2px solid #222;
+  background-color: red;
+  cursor: pointer;
+  box-shadow: 0 3px #999;
+}
+
+.start button:active, .strict button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px #666;
+}
+
+.strict button {
+  background-color: yellow;
+}
+
+.start {
+  margin: 0 15px;
+}
+
+.Control, .Result {
+  background-color: #fff;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 6px solid #222;
+  z-index: 100;
+  top: 100px;
+  left: 100px;
+}
+
+.count span.display {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background-color: #677;
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid #987;
+  vertical-align: middle;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.Control h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.buttonPanel {
+  margin-top: 20px;
+}
+
+.Result {
+  display: table;
+  background-color: #ca70e2;
+  font-size: 1.7em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.Result span {
+  display: table-cell;
+  vertical-align: middle;
+  animation: appear;
+  animation-duration: 3s;
+
+}
+
+.Result span:first-line {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
